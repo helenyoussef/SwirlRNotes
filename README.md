@@ -52,15 +52,15 @@ Objects in workspace: `ls()`
 
 `seq(a, b, length=c)` increments st seq size is c i.e. adds in increments $\frac{b-a}{c-1}$
 
-length()
+`length()`
 
-seq(along.with = my_seq) or seq_along(my_seq) gives sequence 1 2 … length(my_seq)
+`seq(along.with = my_seq)` or `seq_along(my_seq)` gives sequence $1, 2, …,$ `length(my_seq)`
 
-rep(a, times = b) gives a … a, b times 
+`rep(a, times = b)` gives $a, …, a$, b times 
 
-rep(c(…), times = b) gives c1 … cn … , b times
+`rep(c(…), times = b)` gives $c_1, …, c_n, …,$ , b times
 
-rep(c(…), each = b) gives c1 … c1 … cn … cn b times each
+`rep(c(…), each = b)` gives $c_1, …, c_1, …, c_n, …, c_n$ b times each
 
 ## 1.4	VECTORS (13/11/2022)
 
@@ -68,56 +68,57 @@ Atomic and lists
 
 Types of atomic vectors: numeric, logical, character, integer, complex
 
-Character: c(“…”, “…”, …, “…”)
+Character: `c(“…”, “…”, …, “…”)`
 
-Use paste(vector, collapse = “ “) to turn it into one vector
+Use `paste(vector, collapse = “ “)` to turn it into one vector
 
-Or paste(vector1, vector2, sep = “ “) to join componentwise 
+Or `paste(vector1, vector2, sep = “ “)` to join componentwise 
+
 ## 1.5	MISSING VALUES (13/11/2022)
 
 NA ‘not available’, operations leave it unchanged
 
 NaN ‘not a number’
 
-is.na(vector) tells you which positions are NA
+`is.na(vector)` tells you which positions are NA
 
-sum(vector) sums the vector, for TRUE and FALSE vectors it sums the 
+`sum(vector)` sums the vector, for TRUE and FALSE vectors it sums the number of elements that are true
 
 ## 1.6	SUBSETTING VECTORS (14/11/2022)
 
-x[a:b] extracts elements a to b from vector x
+`x[a:b]` extracts elements a to b from vector x
 
-x[c(…)] extracts those specific elements from x
+`x[c(…)]` extracts those specific elements from x
 
-x[-c(…)] extracts all but those specific elements from x
+`x[-c(…)]` extracts all but those specific elements from x
 
-x[logical operation] returns the elements that correspond to true
+`x[logical operation]` returns the elements that correspond to true
 
-x[“…”] returns element with that name
+`x[“…”]` returns element with that name
 
 ‘one-based indexing’
 
-names()
+`names()`
 
-identical() compares if vectors (or matrices) are the same
+`identical()` compares if vectors (or matrices) are the same
 
 ## 1.7	MATRICES AND DATA FRAMES (14/11/2022)
 
-dim() dimension of object, m n means m rows n columns, can assign a vector a dimension and this turns it into a matrix
+`dim()` dimension of object, m n means m rows n columns, can assign a vector a dimension and this turns it into a matrix
 
-length() length of vector
+`length()` length of vector
 
-attributes() 
+`attributes()` 
 
-class()
+`class()`
 
-matrix(data = , nrow = , ncol = )
+`matrix(data = , nrow = , ncol = )`
 
-cbind(vector, matrix) binds column vector on LHS of matrix but turns everything into characters
+`cbind(vector, matrix)` binds column vector on LHS of matrix but turns everything into characters
 
-data.frame(vector, matrix) binds without coercion
+`data.frame(vector, matrix)` binds without coercion
 
-colnames(my_data) <- cnames
+`colnames(my_data) <- cnames`
 
 ## 1.8	LOGIC (15/11/2022)
 
@@ -125,18 +126,18 @@ colnames(my_data) <- cnames
 
 Order of operations: and before or
 
-isTRUE()
+`isTRUE()`
 
-xor()
+`xor()`
 
-which() gives position in vector for which statement is true
+`which()` gives position in vector for which statement is true
 
-any() logical statement for vectors equiv to or
+`any()` logical statement for vectors equiv to or
 
-all() logical statement for vectors equiv to and
+`all()` logical statement for vectors equiv to and
 
 ## 1.9	FUNCTIONS (17/11/2022)
-Sys.Date()
+`Sys.Date()`
 
 function_name <- function(arg1, arg2){
 
