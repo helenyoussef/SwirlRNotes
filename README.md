@@ -139,6 +139,7 @@ Order of operations: and before or
 ## 1.9	FUNCTIONS (17/11/2022)
 `Sys.Date()`
 
+```
 function_name <- function(arg1, arg2){
 
 # Manipulate arguments in some way
@@ -146,80 +147,85 @@ function_name <- function(arg1, arg2){
 # Return a value
 
 }
-
+```
+```
 increment <- function(number, by = 1){
 
 number + by
 
 }
-
+```
+```
 evaluate <- function(func, dat){
 
 func(dat)
 
 }
+```
 
 Can evaluate anonymous functions
+```
 
 "%mult_add_one%" <- function(left, right){ # Notice the quotation marks!
 
 left * right + 1
 
 }
+```
 
 If there’s a … need everything after … to have specified default value
 
 ## 1.10	LAPPLY AND SAPPLY (18/11/2022)
 
-head() shows first 6 lines of dataset
+`head()` shows first 6 lines of dataset
 
-lapply(dataset, function) – list apply – function on columns
+`lapply(dataset, function)` – list apply – function on columns
 
-sapply(dataset, function) – simplify list apply – simplifies lapply to a matrix (if poss)
+`sapply(dataset, function)` – simplify list apply – simplifies lapply to a matrix (if poss)
 
 ## 1.11	VAPPLY AND TAPPLY (18/11/2022)
 
-vapply(dataset, function, type of data) – sapply but with specificity
+`vapply(dataset, function, type of data)` – sapply but with specificity
 
-tapply(dataset$column, dataset$column, function) – splits it up by both columns
+`tapply(dataset$column, dataset$column, function)` – splits it up by both columns
 
 ## 1.12	LOOKING AT DATA (18/11/2022)
 
 Format, dimensions, variable names, variables stored, missing data, flawed data
 
-ls() list variables in workspace
+`ls()` list variables in workspace
 
-class()
+`class()`
 
-dim()
+`dim()`
 
-nrow()
+`nrow()`
 
-ncol()
+`ncol()`
 
-object.size() – gives number of bytes
+`object.size()` – gives number of bytes
 
-names() – column names
+`names()` – column names
 
-head( , n) – first n rows, 6 by default
+`head( , n)` – first n rows, 6 by default
 
-tail( , n) – last n rows, 6 by default
+`tail( , n)` – last n rows, 6 by default
 
-summary()
+`summary()`
 
-str() - structure
+`str()` - structure
 
 ## 1.13	SIMULATION (19/11/2022)
 
-sample(set, number of samples, replace = FALSE, prob = vec of resp probs of each item in set)
+`sample(set, number of samples, replace = FALSE, prob = vec of resp probs of each item in set)`
 
 r – random, d – density, p – probability, q - quantile
 
-rbinom(n, size, prob) ¬¬
+`rbinom(n, size, prob) ¬¬`
 
-replicate(number of replications, distribution)
+`replicate(number of replications, distribution)`
 
-hist() – histogram
+`hist()` – histogram
 
 ## 1.14	DATES AND TIMES (21/11/2022)
 
@@ -229,45 +235,45 @@ dates are stored as the number of days since 1970-01-01
 
 times are stored as number of seconds since 1970-01-01 (for 'POSIXct') or list of seconds, minutes, hours, etc. (for 'POSIXlt').
 
-Sys.date(), Sys.time() – gives in POSIXct
+`Sys.date()`, `Sys.time()` – gives in POSIXct
 
-Class()
+`Class()`
 
-Unclass()
+`Unclass()`
 
 YEAR-MONTH-DAY
 
-as.Date()
+`as.Date()`
 
-as.POSIXlt()
+`as.POSIXlt()`
 
-weekdays()
+`weekdays()`
 
-months()
+`months()`
 
-quarters()
+`quarters()`
 
-strptime() turns something onto YYYY-MM-DD, example input: (t3, "%B %d, %Y %H:%M")
+`strptime()` turns something onto YYYY-MM-DD, example input: (t3, "%B %d, %Y %H:%M")
 
 can compare times
 
-difftime(time1, time2, units = ‘…’)
+`difftime(time1, time2, units = ‘…’)`
 
 lubridate package
 
 1.15	BASE GRAPHICS (21/11/2022)
 
-plot(dataset) – gives scatterplot
+`plot(dataset)` – gives scatterplot
 
-plot(x = dataset$col1, y = dataset$col2, …)
+`plot(x = dataset$col1, y = dataset$col2, …)`
 
 xlab = “”, ylab = “”, main = “”, sub = “”, col = #, xlim = c(a, b), pch = #
 
-key things to explore: dim(), names(), head(), tail() and summary()
+key things to explore: `dim()`, `names()`, `head()`, `tail()` and `summary()`
 
-boxplot(formula = col1 ~ col2, data = dataset)
+`boxplot(formula = col1 ~ col2, data = dataset)`
 
-hist(mtcars$mpg)
+`hist(mtcars$mpg)`
 
 http://varianceexplained.org/r/teach_ggplot2_to_beginners/
 
@@ -279,17 +285,17 @@ https://github.com/DataScienceSpecialization/courses
 
 ## 2.1	INTRODUCTION (21/11/2022)
 
-lm(depvar ~ indepvar, dataset)
+`lm(depvar ~ indepvar, dataset)`
 
-summary(regrline)
+`summary(regrline)`
 
 ## 2.2	RESIDUALS 
 
 Residuals is difference between line of best fit and points
 
-mean(fit$residuals)
+`mean(fit$residuals)`
 
-cov(fit$residuals, dataset$indepvar)
+`cov(fit$residuals, dataset$indepvar)`
 
 ## 2.3	LEAST SQUARES ESTIMATION
 
