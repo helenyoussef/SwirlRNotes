@@ -3,8 +3,8 @@
 Questions
 -	`ls()` gives items in workdesk, how do we search if item is there?
 
-# 1	R PROGRAMMING: THE BASICS OF PROGRAMMING IN R (21/11/2022)
-## 1.1	BASIC BUILDING BLOCKS (13/11/2022)
+# 1	R PROGRAMMING: THE BASICS OF PROGRAMMING IN R 
+## 1.1	BASIC BUILDING BLOCKS 
 Assigning variable: `x <-` 
 
 Vector: `c(…)`, can concatenate by `c(c(…),c(…))`
@@ -15,7 +15,7 @@ Arithmetic: `+ - / ^ sqrt() abs()` [for vectors it’s all done component wise i
 
 Up arrow instead of retype, tab to find variables
 
-## 1.2	WORKSPACE AND FILES (13/11/2022)
+## 1.2	WORKSPACE AND FILES 
 Current directory: `getwd()`
 
 Objects in workspace: `ls()`
@@ -44,7 +44,7 @@ Objects in workspace: `ls()`
 
 `unlink("testdir", recursive = TRUE)`
 
-## 1.3	SEQUENCES OF NUMBERS (13/11/2022)
+## 1.3	SEQUENCES OF NUMBERS 
 
 `a:b` counts in increments of size 1 from first number till reaches next
 
@@ -62,7 +62,7 @@ Objects in workspace: `ls()`
 
 `rep(c(…), each = b)` gives $c_1, …, c_1, …, c_n, …, c_n$ b times each
 
-## 1.4	VECTORS (13/11/2022)
+## 1.4	VECTORS 
 
 Atomic and lists
 
@@ -74,7 +74,7 @@ Use `paste(vector, collapse = “ “)` to turn it into one vector
 
 Or `paste(vector1, vector2, sep = “ “)` to join componentwise 
 
-## 1.5	MISSING VALUES (13/11/2022)
+## 1.5	MISSING VALUES 
 
 NA ‘not available’, operations leave it unchanged
 
@@ -84,7 +84,7 @@ NaN ‘not a number’
 
 `sum(vector)` sums the vector, for TRUE and FALSE vectors it sums the number of elements that are true
 
-## 1.6	SUBSETTING VECTORS (14/11/2022)
+## 1.6	SUBSETTING VECTORS 
 
 `x[a:b]` extracts elements a to b from vector x
 
@@ -102,7 +102,7 @@ NaN ‘not a number’
 
 `identical()` compares if vectors (or matrices) are the same
 
-## 1.7	MATRICES AND DATA FRAMES (14/11/2022)
+## 1.7	MATRICES AND DATA FRAMES 
 
 `dim()` dimension of object, m n means m rows n columns, can assign a vector a dimension and this turns it into a matrix
 
@@ -120,7 +120,7 @@ NaN ‘not a number’
 
 `colnames(my_data) <- cnames`
 
-## 1.8	LOGIC (15/11/2022)
+## 1.8	LOGIC 
 
 `<`, `>`, `>=`, `<=`, `==`, `!=`, `|` or, `&` and, `|` or (for first entry of vector), `&&` and (for first entry of vector), `!` negation
 
@@ -136,7 +136,7 @@ Order of operations: and before or
 
 `all()` logical statement for vectors equiv to and
 
-## 1.9	FUNCTIONS (17/11/2022)
+## 1.9	FUNCTIONS 
 `Sys.Date()`
 
 ```
@@ -175,7 +175,7 @@ left * right + 1
 
 If there’s a … need everything after … to have specified default value
 
-## 1.10	LAPPLY AND SAPPLY (18/11/2022)
+## 1.10	LAPPLY AND SAPPLY 
 
 `head()` shows first 6 lines of dataset
 
@@ -183,13 +183,13 @@ If there’s a … need everything after … to have specified default value
 
 `sapply(dataset, function)` – simplify list apply – simplifies lapply to a matrix (if poss)
 
-## 1.11	VAPPLY AND TAPPLY (18/11/2022)
+## 1.11	VAPPLY AND TAPPLY 
 
 `vapply(dataset, function, type of data)` – sapply but with specificity
 
 `tapply(dataset$column, dataset$column, function)` – splits it up by both columns
 
-## 1.12	LOOKING AT DATA (18/11/2022)
+## 1.12	LOOKING AT DATA 
 
 Format, dimensions, variable names, variables stored, missing data, flawed data
 
@@ -215,7 +215,7 @@ Format, dimensions, variable names, variables stored, missing data, flawed data
 
 `str()` - structure
 
-## 1.13	SIMULATION (19/11/2022)
+## 1.13	SIMULATION 
 
 `sample(set, number of samples, replace = FALSE, prob = vec of resp probs of each item in set)`
 
@@ -227,7 +227,7 @@ r – random, d – density, p – probability, q - quantile
 
 `hist()` – histogram
 
-## 1.14	DATES AND TIMES (21/11/2022)
+## 1.14	DATES AND TIMES 
 
 Dates represented by ‘Date’ class, times represented by 'POSIXct' and 'POSIXlt' classes
 
@@ -283,7 +283,7 @@ http://www.ling.upenn.edu/~joseff/rstudy/week4.html
 
 https://github.com/DataScienceSpecialization/courses
 
-## 2.1	INTRODUCTION (21/11/2022)
+## 2.1	INTRODUCTION 
 
 `lm(depvar ~ indepvar, dataset)`
 
